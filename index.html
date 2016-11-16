@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="swsServices">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,7 +19,7 @@
     <script src="app.js"></script>
     <script src="appJQ.js"></script>
 </head>
-<body ng-controller="">
+<body ng-controller="myCtrl">
 <!--Navbar-->
 <div class="navbar-wrapper">
     <div class="container">
@@ -64,7 +64,7 @@
                                 <ul>
                                     <li>Refrigerator</li>
                                     <li> Washing Machine</li>
-                                    <li>AC</li>
+                                    <li>A/C</li>
                                     <li>Gyser</li>
                                     <li>Gas Stove</li>
                                 </ul>
@@ -110,7 +110,7 @@
 </div>
 
 <!--Discount Bar-->
-<div class="col-lg-12 hidden-xs">
+<div class="col-lg-12 hidden-xs patch-topspace">
     <div class="row hide-overflow">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 strip-1">
             <div class="strip-text1">Save 15%</div>
@@ -198,6 +198,18 @@
                     Connect with our highly qualified local companies, with service guaranteed by Sears Home Services.
                     Earn Shop Your Way points with every service.
                 </div>
+                <div>
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding">
+                                <button class="btn-outline-find" data-toggle="modal" data-target="#myModal">Find an Electrician</button>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding">
+                                <button class="btn-outline-find" data-toggle="modal" data-target="#myModal">Find an Plumber</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -206,5 +218,41 @@
 <div class="footer">
     <div class="container">&copy; 2016 SWS Services, LLC. All Rights Reserved</div>
 </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Schedule Your Service</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" ng-model="name" class="input-field" placeholder="Name">
+                <input type="text" ng-model="email" class="input-field" placeholder="Email">
+                <input type="text" ng-model="phone" class="input-field" placeholder="Phone">
+                <select  ng-model="city" class="input-field">
+                    <option value="" disabled selected>Your City</option>
+                    <option value="Pune">Pune</option>
+                </select>
+                <select ng-model="service" class="input-field">
+                    <option value="" disabled selected>Service Needed</option>
+                    <option value="AC">A/C</option>
+                    <option value="Refrigerator">Refrigerator</option>
+                    <option value="WashingMachine">Washing Machine</option>
+                    <option value="Gyser">Gyser</option>
+                    <option value="GasStove">Gas Stove</option>
+                </select>
+                <button class="btn-submit">Send</button>
+            </div>
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+            <!--</div>-->
+        </div>
+
+    </div>
+</div>
+
 </body>
 </html>
