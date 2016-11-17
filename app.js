@@ -20,4 +20,4 @@ app.controller('myCtrl', function ($scope, $http) {
             // or server returns response with an error status.
         });
     }
-});
+}); 
