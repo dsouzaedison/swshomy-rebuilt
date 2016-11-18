@@ -12,7 +12,7 @@ app.controller('myCtrl', function ($scope, $http) {
         // console.log($scope.data);
         $http({
             method: 'POST',
-            url: '/requestservice.php',
+            url: 'requestservice.php',
             data : $scope.data
         }).then(function successCallback(response) {
             $('#myModal').modal('hide');

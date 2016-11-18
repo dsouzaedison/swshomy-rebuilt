@@ -1,19 +1,15 @@
 <?php 
 //header('content-type: application/json; charset=utf-8');
 //header("access-control-allow-origin: *");
+$email = 'unknown@swshomy.com';
 
-if(isset($_POST['name']))
-	$name=$_POST['name'];
-else $name = '';
-if(isset($_POST['email']))
-	$email=$_POST['email'];
-else $email = '';
-if(isset($_POST['phone']))
-	$phone=$_POST['phone'];
-else $phone = '';
-if(isset($_POST['service']))
-	$service=$_POST['service'];
-else $service = '';
+$postdata = file_get_contents("php://input");
+$request = json_decode($postdata);
+
+$email = $request->email;
+$phone = $request->phone;
+$name = $request->name ;
+$service = $request->service;
 
 $text = "Name: <b>" .$name ."</b><br/>";
 $text .= "Phone: <b>" .$phone ."</b><br/>";
@@ -22,5 +18,5 @@ $text .= "service: <p>" .$service ."</p><br/>";
 
 require "mailer.php";
 
-$status=mailer("testing@gmail.com","Service Request From SWS Services Website",$text,$email,"keyForFun");
+$status=mailer("dsouzaedison11@gmail.com","Service Request From SWS Services Website",$text,$email,"keyForFun");
 ?>
