@@ -9,7 +9,7 @@ app.controller('myCtrl', function ($scope, $http) {
             email : $scope.email,
             service : $scope.service
         };
-        console.log($scope.data);
+        // console.log($scope.data);
         $http({
             method: 'POST',
             url: '/requestservice.php',

@@ -14,6 +14,7 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="app.css"/>
+    <link rel="stylesheet" href="media-query.css"/>
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
     <script src="routes.js"></script>
     <script src="app.js"></script>
@@ -24,7 +25,7 @@
 <div class="navbar-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="logo-wrapper">
                     <img src="images/logo.png" alt="Logo" class="logo">
                     <span class="company-name color-white">SWS Services</span>
@@ -37,7 +38,7 @@
 
 <!--Contact Bar-->
 <div class="contact-bar">
-    Call to book: 1-800-665-2127
+    <span class="inline-block">Call to book: 1-800-665-4564</span>
 </div>
 
 <!--Banner-->
@@ -50,11 +51,22 @@
                     <div class="banner-subheader color-white">Your appliance repair and home improvement experts</div>
                 </div>
             </div>
-            <div class="row">
-                <div class="schedule-wrapper"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="schedule-wrapper margin-top">
+                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 btn-book-now" data-toggle="modal" data-target="#myModal">
+                                Schedule Now
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 color-white call-text">
+                                <span>Or Call 1-800-665-2545</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 padding margin-top-lg">
+                <div class="col-lg-12 padding">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding">
                         <div class="card">
                             <div class="card-header">
@@ -169,7 +181,7 @@
     <div class="review-heading">Customer review: Flawless and fast</div>
     <div class="col-lg-12">
         <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 center-xs">
                 <i class="fa fa-quote-right"></i>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 padding">
@@ -202,10 +214,14 @@
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding">
-                                <button class="btn-outline-find" data-toggle="modal" data-target="#myModal">Find an Electrician</button>
+                                <button class="btn-outline-find" data-toggle="modal" data-target="#myModal">Find an
+                                    Electrician
+                                </button>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding">
-                                <button class="btn-outline-find" data-toggle="modal" data-target="#myModal">Find an Plumber</button>
+                                <button class="btn-outline-find" data-toggle="modal" data-target="#myModal">Find an
+                                    Plumber
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -232,7 +248,7 @@
                 <input type="text" ng-model="name" class="input-field" placeholder="Name">
                 <input type="text" ng-model="email" class="input-field" placeholder="Email">
                 <input type="text" ng-model="phone" class="input-field" placeholder="Phone">
-                <select  ng-model="city" class="input-field">
+                <select ng-model="city" class="input-field">
                     <option value="" disabled selected>Your City</option>
                     <option value="Pune">Pune</option>
                 </select>
@@ -247,7 +263,7 @@
                 <button class="btn-submit" ng-click="sendData()">Send</button>
             </div>
             <!--<div class="modal-footer">-->
-                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
             <!--</div>-->
         </div>
 

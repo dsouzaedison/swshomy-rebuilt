@@ -44,7 +44,7 @@ body {
     width: 100%;
     min-height: 450px;
     padding: 30px 0px !important;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .banner-header {
@@ -148,7 +148,7 @@ ul {
     margin: 5px;
 }
 
-.offer-header{
+.offer-header {
     font-size: 125%;
     font-weight: bold;
 }
@@ -265,10 +265,10 @@ ul {
     outline: none;
     border-bottom: 2px solid dodgerblue;
     -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out ;
-    -ms-transition: all 0.5s ease-in-out ;
-    -o-transition: all 0.5s ease-in-out ;
-    transition: all 0.5s ease-in-out ;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .btn-submit {
@@ -295,4 +295,35 @@ ul {
 .modal-header {
     background: #c3d32b;
     color: #4c4c4c;
+}
+
+.btn-book-now {
+    background: rgba(249, 140, 0, 0.8);
+    border: 1px solid #fff;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    color: #fff;
+    box-shadow: 2px 2px 0.3em #505050;
+    font-size: 135%;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-book-now:hover {
+    box-shadow: none;
+}
+
+.margin-top {
+    margin-top: 15px;
+}
+
+.call-text {
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.inline-block {
+    display: inline-block;
 }
